@@ -59,7 +59,6 @@
     <Compile Include="Assets\Scripts\Snake2.cs" />
     <Compile Include="Assets\Sprites\CustomTilesType\FootTiles.cs" />
     <Compile Include="Assets\Scripts\Food.cs" />
-    <Compile Include="Assets\Scripts\Snake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AutoSave\ReadMe.txt" />
