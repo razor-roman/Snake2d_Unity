@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Food : MonoBehaviour
 {
     public BoxCollider2D gridArea;
@@ -16,7 +15,7 @@ public class Food : MonoBehaviour
         get { return this.transform; }
     }
     private void RandomizePosition()
-    {
+    {        
         Bounds bounds = this.gridArea.bounds;
         do
         {

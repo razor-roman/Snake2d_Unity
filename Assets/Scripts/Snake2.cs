@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
 public class Snake2 : MonoBehaviour
 {
-    private Transform prevPos;    
+     
     public BoxCollider2D gridArea;
     public GameLogic gameLogic;
     public BoxSpawner boxSpawner;
@@ -15,12 +16,14 @@ public class Snake2 : MonoBehaviour
 
     [SerializeField] private Transform applePrefab;
     [SerializeField] private Transform segmentPrefab;
+
     private List<Transform> _segments = new List<Transform>();
-    
+    private Transform prevPos;
+
     public int initialSizeSnake=3;
     Vector2 _direction = Vector2.right;
 
-    private const float   timeStep = 0.05f;
+    private const float timeStep = 0.05f;
     private const float startTime = 1f;
 
     private void Start()

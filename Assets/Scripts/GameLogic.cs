@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class GameLogic : MonoBehaviour
 {
     private int score;
@@ -15,10 +16,10 @@ public class GameLogic : MonoBehaviour
         
     }
     public void ResetScore()
-    {        
-        if (score > maxScore) maxScore = score;
-        textMaxScore.text = maxScore.ToString();
+    {
+        maxScore=Mathf.Max(score, maxScore); //if (score > maxScore) maxScore = score;
         score = 0;
+        textMaxScore.text = maxScore.ToString();        
         textScore.text = score.ToString();
     }
 

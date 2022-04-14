@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class BoxSpawner : MonoBehaviour
 {
     [SerializeField] private Transform boxPrefab;
     private List<Transform> _boxes = new List<Transform>();
+    private float spawnOffset = 5;
+
     public BoxCollider2D gridArea;
     public LayerMask mask;
-    private float spawnOffset=5;
+    
     private Vector2 RandomizePosition()
     {
         Bounds bounds = this.gridArea.bounds;
@@ -35,11 +36,5 @@ public class BoxSpawner : MonoBehaviour
         }
         _boxes.Clear();        
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag=="Player" || other.tag == "Obstacle")
-        {            
-            _boxes[_boxes.Count].position=RandomizePosition();
-        }
-    }
+    
 }
